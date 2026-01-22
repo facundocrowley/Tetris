@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tetris</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="side-panel left">
+            <div class="hold-box">
+                <h3>HOLD</h3>
+                <canvas id="holdCanvas" width="100" height="100"></canvas>
+            </div>
+            <div class="controls-info">
+                <h3>CONTROLES</h3>
+                <p><span class="key">←</span> Mover izquierda</p>
+                <p><span class="key">→</span> Mover derecha</p>
+                <p><span class="key">↓</span> Bajar</p>
+                <p><span class="key">↑</span> Rotar</p>
+                <p><span class="key">Space</span> Caer</p>
+                <p><span class="key">C</span> Hold</p>
+                <p><span class="key">P</span> Pausa</p>
+            </div>
+        </div>
+
+        <div class="main-board">
+            <canvas id="gameCanvas" width="300" height="600"></canvas>
+            <div id="gameOver" class="overlay hidden">
+                <h2>GAME OVER</h2>
+                <p>Puntuacion: <span id="finalScore">0</span></p>
+                <button id="restartBtn">Reiniciar</button>
+            </div>
+            <div id="pauseOverlay" class="overlay hidden">
+                <h2>PAUSA</h2>
+                <p>Presiona P para continuar</p>
+            </div>
+        </div>
+
+        <div class="side-panel right">
+            <div class="next-box">
+                <h3>SIGUIENTE</h3>
+                <canvas id="nextCanvas" width="100" height="100"></canvas>
+            </div>
+            <div class="score-box">
+                <h3>PUNTUACION</h3>
+                <p id="score">0</p>
+            </div>
+            <div class="level-box">
+                <h3>NIVEL</h3>
+                <p id="level">1</p>
+            </div>
+            <div class="lines-box">
+                <h3>LINEAS</h3>
+                <p id="lines">0</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="tetris.js"></script>
+</body>
+</html>
