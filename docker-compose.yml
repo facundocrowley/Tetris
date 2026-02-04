@@ -1,0 +1,6 @@
+services:
+  tetris:
+    build: .
+    ports:
+      - "5018:5018"
+    restart: unless-stopped
